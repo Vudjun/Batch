@@ -1,0 +1,20 @@
+name: Batch
+main: batch.Batch
+version: 1.2
+author: Vudjun
+description: Allows you to batch commands in simple, and slightly complicated ways.
+
+commands:
+  batch:
+    description: Batch commands.
+    permission: batch.command
+    aliases: cl
+    usage: /batch <list|run <name>|debug <name>|stop <name>>
+
+permissions:
+  batch.command:
+    description: Allows use of the /batch command
+    default: OP
+  batch.*:
+    children:
+      batch.command: true
